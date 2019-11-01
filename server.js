@@ -15,7 +15,7 @@ app.post('/signup', async (req, res)=>{
     } catch {
         res.status(500).send()
     }
-})
+});
 
 app.post('/login', async (req, res) => {
     const user = users.find(user => user.name === req.body.name)
@@ -31,7 +31,7 @@ app.post('/login', async (req, res) => {
     } catch {
       res.status(500).send()
     }
-  })
+});
 
 app.listen(3000, ()=>{
     console.log('Server running on port 3000')
